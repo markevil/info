@@ -944,7 +944,7 @@ body {
 
 .iletisim-form-alani {
   padding: 20rem 0 10rem;
-  margin-top: -20vh;
+  margin-top: -30vh;
   background-color: #fff; }
   @media only screen and (max-width: 56.25em) {
     .iletisim-form-alani {
@@ -5547,12 +5547,12 @@ ul#tabs {
 .tablo {
   max-width: 119rem;
   margin: 0 auto;
-  width: 100%;
+  width: 80%;
   display: flex;
-  justify-content: center;
+  justify-content:left;
   flex-wrap: wrap; }
   .tablo:not(:last-child) {
-    margin-bottom: 8rem; }
+    margin-bottom: 4rem; }
     @media only screen and (max-width: 56.25em) {
       .tablo:not(:last-child) {
         margin-bottom: 6rem;
@@ -5596,7 +5596,7 @@ ul#tabs {
   justify-content: center;
   flex-wrap: wrap; }
   .tabloozellik:not(:last-child) {
-    margin-bottom: 8rem; }
+    margin-bottom: 4rem; }
     @media only screen and (max-width: 56.25em) {
       .tabloozellik:not(:last-child) {
         margin-bottom: 6rem;
@@ -11926,7 +11926,7 @@ button[type="submit"] {
   font-size: 14px;
   font-weight: 500;
   color: #fff;
-  background: #9E4B47;
+  background: #09e6f080;
   border: none;
   padding: 0 50px; }
   button[type="submit"] i {
