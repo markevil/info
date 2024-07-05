@@ -2800,33 +2800,139 @@ header.page-header {
                       </li>
                   </div>
                   
-              <div class="callbackform wow fadeInUp" data-wow-delay="0.7s">
-                <h2 class="h2-baslik-popup h-yazi-margin-kucuk">
-                        Leave Your Number<br />
-                    </h2>
-                <p class="paragraf-popup">
-                        Let's Call You Back
-                    </p>
-                <div class="form-popup">
-                <div class="form-popup__grup">
-                            <span class="wpcf7-form-control-wrap" data-name="text-667"><input type="text" name="text-667" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required form-popup__input" aria-required="true" aria-invalid="false" placeholder="Full Name" /></span><br />
-                            <label for="text-667" class="form-popup__label"></label>
-                        </div>
-                <div class="form-popup__grup">
-                            <span class="wpcf7-form-control-wrap" data-name="email-217"><input type="email" name="email-217" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email form-popup__input" aria-required="true" aria-invalid="false" placeholder="Email Address" /></span><br />
-                            <label for="email-217" class="form-popup__label"></label>
-                        </div>
-                <div class="form-popup__grup">
-                            <span class="wpcf7-form-control-wrap" data-name="text-661"><input type="text" name="text-661" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required form-popup__input" aria-required="true" aria-invalid="false" placeholder="Phone Number" /></span><br />
-                            <label for="text-661" class="form-popup__label"></label>
-                        </div>
-                <div class="form-popup__grup">
-                <div class="or">
-                              <input type="submit" value="Submit Form →" class="wpcf7-form-control has-spinner wpcf7-submit custom-buttonf" />
-                            </div>
-                </div>
-                </div>
-                </div>
+                  <style>
+
+                    .bodi {
+                        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+                        display:flex;
+                        background-image: url(../images/pikaso_texttoimage_35mm-film-photography-Stylized-vector-artwork-show.jpeg);
+                        background-size: cover; 
+                            background-position: center; 
+                            background-repeat: no-repeat; 
+                        justify-content:center;
+                        align-items:center;
+                        height: auto;
+                        margin: 0;
+                       
+                    }
+                    
+                    .form-container {
+                     
+                             /* Semi-transparent background */
+                            padding: 30px;
+                            border-radius: 10px;
+                            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+                            width: 100%;
+                            height: 100%;
+                            backdrop-filter: blur(30px);
+                    }
+                    
+                    
+                    .heading {
+                        text-align: center;
+                        margin-bottom: 20px;
+                        color:white;
+                        font-size: 24px;
+                    }
+                    
+                    label {
+                        display: block;
+                        margin-bottom: 5px;
+                        font-weight: bold;
+                        color:whitesmoke;
+                    }
+                    
+                    input, select {
+                        width: 100%;
+                        padding: 10px;
+                        margin-bottom: 15px;
+                        border: 1px solid #ddd;
+                        border-radius: 5px;
+                        font-size: 14px;
+                        color:#000000;
+                        box-sizing: border-box;
+                        
+                    }
+                    
+                    input:focus, select:focus {
+                        border-color: #6a11cb;
+                        outline: none;
+                        box-shadow: 0 0 8px rgba(106, 17, 203, 0.1);
+                    }
+                  
+                   #input{
+                  height: 2px;
+                   }
+                    
+                    button {
+                        width: 100%;
+                        padding: 12px;
+                        background-color:rgb(152,150,240);
+                        color:rgb(152,150,240);
+                        border: none;
+                        border-radius: 5px;
+                        cursor: pointer;
+                        font-size: 16px;
+                        transition: background-color 0.3s ease;
+                    }
+                    
+                    button:hover {
+                        background-color: #25599e;
+                    }
+                    
+                    button:focus {
+                        outline: none;
+                        box-shadow: 0 0 8px rgba(194, 11, 184, 0.4);
+                    }
+                    
+                    @media (max-width: 600px) {
+                        .form-container {
+                            padding: 20px;
+                        }
+                    
+                        h2 {
+                            font-size: 20px;
+                        }
+                    
+                        input, select, button {
+                            font-size: 14px;
+                        }
+                    }
+                    
+                    
+                    </style>
+                                    <div class="bodi" data-wow-delay="0.7s">
+                                      <div class="form-container">
+                                        <h2 class="heading">Leave your Number</h2>
+                                        <form id="jobApplicationForm" autocomplete="off" method="post" name="google-sheet">
+                                          <label for="firstName">Full Name:</label>
+                                          <input type="text" id="firstName"  style="height: 40px;" placeholder="Enter Full Name" name="FullName" required>
+                              
+                                        
+                                          <label for="email1">Email:</label>
+                                          <input type="email" id="email1"  style="height: 40px;" placeholder="Enter Email" name="Email" required>
+                              
+                                          <label for="phone">  Phone Number:</label>
+                                          <input type="number" id="phone" placeholder="Enter Phone Number" name="PhoneNumber" required >
+                                          
+                                          <input type="hidden" id="serviceName" name="ServiceName" value="QA-Testing & Certification">
+                                                    
+                                          <button type="submit" name="Submit"  >Submit</button>
+                                      </form>
+                                    </div>
+                                   
+                                    <script>
+                                      const scriptURL = 'https://script.google.com/macros/s/AKfycbzZq7wjxEcLAFLCANRHeDhKW3cT-SswonFZX-xFOfl-ekrYp8brspENpW05lzrFKdzX/exec';
+                                      const form = document.forms['google-sheet'];
+                              
+                                      form.addEventListener('submit', e => {
+                                          e.preventDefault();
+                                          fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                                              .then(response => alert('Thanks for contacting us! We will contact you soon.'))
+                                              .catch(error => console.error('Error!', error.message));
+                                      });
+                                  </script>
+                                  </div>
                   <div class="bosluk3"></div>
               </div>
 

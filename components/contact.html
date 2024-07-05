@@ -2781,206 +2781,221 @@ header.page-header {
 <main>
   <!--İletişim İcon Alanı-->
   <section class="iletisim-icon-alani">
-      <div class="tablo">
+     
+  </section>
+
+  
+
+<style>
+
+
+
+  .bodi {
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      display:flex;
+      
+      background-image: url(../images/5.jpg);
+      background-size: cover; 
+          background-position: center; 
+          background-repeat: no-repeat; 
+      justify-content:center;
+      align-items:center;
+      height: auto;
+      margin: 0;
+      
+  }
+  
+  .form-container {
+    margin-top: 50px;
+          margin-bottom: 50px;
+           /* Semi-transparent background */
+          padding: 30px;
+          border-radius: 10px;
+          box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+          width: 40%;
+          max-width: 80%;
+          min-width: 30%;
+          height: 100%;
+          backdrop-filter: blur(30px);
+  }
+  
+  
+  h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color:white;
+      font-size: 24px;
+  }
+  
+  label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+      color:whitesmoke;
+  }
+  
+  input, select {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      font-size: 14px;
+      color:#000000;
+      box-sizing: border-box;
+      
+  }
+  
+  input:focus, select:focus {
+      border-color: #6a11cb;
+      outline: none;
+      box-shadow: 0 0 8px rgba(106, 17, 203, 0.1);
+  }
+
+
+ #input{
+height: 2px;
+
+
+ }
+ .messagearea{
+  width: 100%;
+}
+
+  button {
+      width: 100%;
+      padding: 12px;
+      background-color:rgb(152,150,240);
+      color:rgb(152,150,240);
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+      background-color: #25599e;
+  }
+  
+  button:focus {
+      outline: none;
+      box-shadow: 0 0 8px rgba(194, 11, 184, 0.4);
+  }
+  
+  @media (max-width: 600px) {
+      .form-container {
+          padding: 20px;
+      }
+  
+      h2 {
+          font-size: 20px;
+      }
+  
+      input, select, button {
+          font-size: 14px;
+      }
+  }
+  
+  
+  </style>
+  
+  <div class="tablo" >
 
 
       
           
 
 
-          <div class="tablo--1-ve-3 wow fadeInLeft" data-wow-delay="0.5s">
-              <div class="ozellik-kutu-iletisim" onclick="location.href='#';" style="cursor:pointer;">
-                  <div class="icon"><i class="flaticon-headphones"></i></div>
-                  <h3 class="baslik-4 h-yazi-margin-kucuk-2">Customer service</h3>
-                  <p class="ozellik-kutu-iletisim--yazi">
-                    +91 9403 33 68 95   <br>
-                  +91 9766 21 10 22                       </p>
-              </div>
-          </div>
+    <div class="tablo--1-ve-3 wow fadeInLeft" data-wow-delay="0.5s">
+        <div class="ozellik-kutu-iletisim" onclick="location.href='#';" style="cursor:pointer;">
+            <div class="icon"><i class="flaticon-headphones"></i></div>
+            <h3 class="baslik-4 h-yazi-margin-kucuk-2">Customer service</h3>
+            <p class="ozellik-kutu-iletisim--yazi">
+              +91 9403 33 68 95   <br>
+            +91 9766 21 10 22                       </p>
+        </div>
+    </div>
 
 
-          
-
-
-          <div class="tablo--1-ve-3 wow fadeInLeft" data-wow-delay="0.5s">
-              <div class="ozellik-kutu-iletisim" onclick="location.href='#';" style="cursor:pointer;">
-                  <div class="icon"><i class="flaticon-email"></i></div>
-                  <h3 class="baslik-4 h-yazi-margin-kucuk-2">Mail Address</h3>
-                  <p class="ozellik-kutu-iletisim--yazi">
-                    Info@infoinnotronics.com       <br>                    </p>
-              </div>
-          </div>
-
-
-          
-
-
-          <div class="tablo--1-ve-3 wow fadeInRight" data-wow-delay="0.5s">
-              <div class="ozellik-kutu-iletisim" onclick="location.href='#';" style="cursor:pointer;">
-                  <div class="icon"><i class="flaticon-location"></i></div>
-                  <h3 class="baslik-4 h-yazi-margin-kucuk-2">Office</h3>
-                  <p class="ozellik-kutu-iletisim--yazi">
-                    Khadaki,Pune-411003.
-                    Maharashtra, India                          </p>
-              </div>
-          </div>
-
-
-             
-
-           
-          </div>
-
-
-  </section>
-
-  <!--İletişim Form Alanı-->
-  <section class="iletisim-form-alani">
     
-           <div role="form" class="wpcf7" id="wpcf7-f1129-o1" lang="en-US" dir="ltr">
-<div class="screen-reader-response"><p role="status" aria-live="polite" aria-atomic="true"></p> <ul></ul></div>
-<form action="../index.html" method="post" class="wpcf7-form init" novalidate="novalidate" data-status="init">
-<div style="display: none;">
-<input type="hidden" name="_wpcf7" value="1129" />
-<input type="hidden" name="_wpcf7_version" value="5.6" />
-<input type="hidden" name="_wpcf7_locale" value="en_US" />
-<input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f1129-o1" />
-<input type="hidden" name="_wpcf7_container_post" value="0" />
-<input type="hidden" name="_wpcf7_posted_data_hash" value="" />
-</div>
 
 
+    <div class="tablo--1-ve-3 wow fadeInLeft" data-wow-delay="0.5s">
+        <div class="ozellik-kutu-iletisim" onclick="location.href='#';" style="cursor:pointer;">
+            <div class="icon"><i class="flaticon-email"></i></div>
+            <h3 class="baslik-4 h-yazi-margin-kucuk-2">Mail Address</h3>
+            <p class="ozellik-kutu-iletisim--yazi">
+              Info@infoinnotronics.com       <br>                    </p>
+        </div>
+    </div>
 
-<style>
-        * {
-            box-sizing: border-box;
-        }
 
-        .bodi {
-            font-family: 'Rubik', sans-serif;
-            display:flex;
-            justify-content: center;
-            align-items: center;
-            height: auto;
-            background-color: white;
-        }
+    
 
-        .form-container {
-            background-color: #fff;
-            display:inline-grid; 
-            align-items: center;
-            align-self: center;
-            align-content: center;
-            padding: 20px 40px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            width: 60%;
-        }
 
-        .form-container h2 {
-            margin-bottom: 20px;
-            color: #4f46a5;
-        }
+    <div class="tablo--1-ve-3 wow fadeInRight" data-wow-delay="0.5s">
+        <div class="ozellik-kutu-iletisim" onclick="location.href='#';" style="cursor:pointer;">
+            <div class="icon"><i class="flaticon-location"></i></div>
+            <h3 class="baslik-4 h-yazi-margin-kucuk-2">Office</h3>
+            <p class="ozellik-kutu-iletisim--yazi">
+              Khadaki,Pune-411003.
+              Maharashtra, India                          </p>
+        </div>
+    </div>
 
-        .form-container .con {
-            margin-bottom: 15px;
-        }
 
-        .form-container label {
-            display: block;
-            margin-bottom: 5px;
-            color: #333;
-        }
+       
 
-        .form-container input,
-        .form-container textarea {
-            width: 200%;
-            padding: 10px;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-            font-family: 'Rubik', sans-serif;
-            transition: border-color 0.2s;
-        }
+     
+    </div>
 
-        .form-container input:focus,
-        .form-container textarea:focus {
-            border-color: #0f7ef1;
-            outline: none;
-        }
+ <div class="bodi" data-wow-delay="0.7s">
 
-        .form-container button {
-            display: inline-block;
-            padding: 10px 20px;
-            border: none;
-            background-color: #0f7ef1;
-            color: #fff;
-            border-radius: 4px;
-            cursor: pointer;
-            font-family: 'Rubik', sans-serif;
-            transition: background-color 0.2s;
-        }
+ 
 
-        .form-container button:hover {
-            background-color: #0a5db8;
-        }
-  </style>
-
-<div class="bodi">
   <div class="form-container">
-    <form id="contactForm" autocomplete="off" method="post" name="google-sheet">
-      <div class="con">   
-        <label for="fullName1">Full Name:</label><br>
-        <input type="text" id="fullName1" placeholder="Enter Full Name" name="FullName" required>
-      </div>
-      <br>
-      <div class="con">  
-        <label for="email1">Email Address:</label><br>
-        <input type="email" id="email1" placeholder="Enter Email" name="EmailAddress" required>
-      </div>
-      <br>
-      <div class="con"> 
-        <label for="phone1">Phone Number:</label><br>
-        <input type="number" id="phone1" placeholder="Enter Phone Number" name="PhoneNumber" required>
-      </div>
-      <br>
-      <div class="con">
-        <label for="message1">Your Message:</label><br>
-        <textarea id="message1" placeholder="Enter Your Message" name="Message" rows="5" required></textarea>
-      </div>
-      <button type="submit" name="Submit">Submit</button>
-    </form>
-  </div>
+    <h2 class="heading">Leave your Number</h2>
+    <form id="jobApplicationForm" autocomplete="off" method="post" name="google-sheet">
+      <label for="firstName">Full Name:</label>
+      <input type="text" id="firstName"  style="height: 40px;" placeholder="Enter Full Name" name="FullName" required maxlength="60" pattern="[A-Za-z\s]{1,60}">
+
+    
+      <label for="email1">Email:</label>
+      <input type="email" id="email1"  style="height: 40px;" placeholder="Enter Email" name="Email" required>
+
+      <label for="phone">  Phone Number:</label>
+      <input type="number" id="phone" placeholder="Enter Phone Number" name="PhoneNumber" required oninput="javascript: if (this.value.length > 10) this.value = this.value.slice(0, 10);" >
+      
+      
+
+
+      <label for="message">Message:</label>
+      <textarea type="text" class="messagearea" id="message" name="Message" placeholder="Enter Your Message" ></textarea>   
+      
+      <input type="hidden" id="serviceName" name="ServiceName" value="Contact">
+
+      <button type="submit" name="Submit"  >Submit</button>
+  </form>
 </div>
 
 <script>
-  const scriptURL = 'https://script.google.com/macros/s/AKfycbxcT-9kBU55moc1llhI_AhpE1CkQ-PwX66jcuJ4a1zHq6j9uVtlqV8g7B83HZuh7IKl/exec';
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbzZq7wjxEcLAFLCANRHeDhKW3cT-SswonFZX-xFOfl-ekrYp8brspENpW05lzrFKdzX/exec';
   const form = document.forms['google-sheet'];
 
   form.addEventListener('submit', e => {
-    e.preventDefault();
-    fetch(scriptURL, { method: 'POST', body: new FormData(form) })
-      .then(response => response.json())
-      .then(response => {
-        if (response.result === 'success') {
-          alert('Thanks for contacting us! We will contact you soon.');
-        } else {
-          throw new Error('Form submission failed');
-        }
-      })
-      .catch(error => {
-        console.error('Error!', error.message);
-        alert('There was an error submitting the form. Please try again later.');
-      });
+      e.preventDefault();
+      fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+          .then(response => alert('Thanks for contacting us! We will contact you soon.'))
+          .catch(error => console.error('Error!', error.message));
   });
 </script>
-
-
-
+  </div>
 
 
 <div class="wpcf7-response-output" aria-hidden="true"></div></form></div>
 
-  </section>
+
 </main>
 <p><iframe style="border: 0;" src="        https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1124.4716570146609!2d73.82555066670325!3d18.562460391589788!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2bf6f0cb4bca5%3A0xb62250cd9faabe7d!2sAundh%20Rd%2C%20Khadki%2C%20Pune%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1717956168966!5m2!1sen!2sin
 " width="100%" height="450px" allowfullscreen="allowfullscreen"></iframe></p>

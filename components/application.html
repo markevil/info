@@ -2785,31 +2785,37 @@ header.page-header {
 
     .bodi {
         font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-        display: flex;
-       
-        justify-content: center;
-        align-items: center;
+        display:flex;
+        background-image: url(../images/5126124.jpg);
+        background-size: cover; 
+            background-position: center; 
+            background-repeat: no-repeat; 
+        justify-content:center;
+        align-items:center;
         height: auto;
         margin: 0;
-        background: linear-gradient(to right, #abb8c3, #7bdcb5);
+       
     }
     
     .form-container {
-        
-        background-color: #fff;
-        padding: 30px;
-        border-radius: 10px;
-        box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-        width: 60%;
-        max-width: 80%;
-        min-width: 30%;
-        height: 80%;
+      margin-top: 50px;
+            margin-bottom: 50px;
+             /* Semi-transparent background */
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+            width: 40%;
+            max-width: 80%;
+            min-width: 30%;
+            height: 100%;
+            backdrop-filter: blur(30px);
     }
+    
     
     h2 {
         text-align: center;
         margin-bottom: 20px;
-        color: #333;
+        color:white;
         font-size: 24px;
     }
     
@@ -2817,7 +2823,7 @@ header.page-header {
         display: block;
         margin-bottom: 5px;
         font-weight: bold;
-        color: #555;
+        color:whitesmoke;
     }
     
     input, select {
@@ -2827,8 +2833,9 @@ header.page-header {
         border: 1px solid #ddd;
         border-radius: 5px;
         font-size: 14px;
-        color: #333;
+        color:#000000;
         box-sizing: border-box;
+        
     }
     
     input:focus, select:focus {
@@ -2838,14 +2845,14 @@ header.page-header {
     }
 
    #input{
-height: 5px;
+height: 2px;
    }
     
     button {
         width: 100%;
         padding: 12px;
-        background-color: #1590ca;
-        color: #0693e3;
+        background-color:rgb(152,150,240);
+        color:rgb(152,150,240);
         border: none;
         border-radius: 5px;
         cursor: pointer;
@@ -2881,46 +2888,46 @@ height: 5px;
     
    <br><br>
    <br>    
-    <div class="bodi">
+    <div class="bodi" >
+      
         <div class="form-container">
             <h2>Job Application Form</h2>
             <form id="jobApplicationForm" autocomplete="off" method="post" name="google-sheet">
-              <label for="firstName">First Name:</label>
-              <input type="text" id="firstName" placeholder="Enter First Name" name="FirstName" required>
-  
-              <label for="middleName">Middle Name:</label>
-              <input type="text" id="middleName" placeholder="Enter Middle Name" name="MiddleName">
-  
-              <label for="lastName">Last Name:</label>
-              <input type="text" id="lastName" placeholder="Enter Last Name" name="LastName" required>
+              <label for="firstName">Full Name:</label>
+              <input type="text" id="firstName"  style="height: 40px;" placeholder="Enter Full Name" name="FullName" required  maxlength="60" pattern="[A-Za-z\s]{1,60}">
   
               <label for="email1">Email:</label>
-              <input type="email" id="email1" placeholder="Enter Email" name="Email" required>
+              <input type="email" id="email1"  style="height: 40px;" placeholder="Enter Email" name="Email" required>
   
-              <label for="phone">Phone Number:</label>
-              <input type="number" id="phone" placeholder="Enter Phone Number" name="PhoneNumber" required>
+              <label for="phone">  Phone Number:</label>
+              <input type="number" id="phone" placeholder="Enter Phone Number" name="PhoneNumber" required  oninput="javascript: if (this.value.length > 10) this.value = this.value.slice(0, 10);" >
   
               <label for="university">University:</label>
-              <input type="text" id="university" placeholder="Enter University" name="University" required>
+              <input type="text" id="university"  style="height: 40px;" placeholder="Enter University" name="University" required>
   
               <label for="degree">Degree:</label>
-              <input type="text" id="degree" placeholder="Enter Degree" name="Degree" required>
+              <input type="text" id="degree"  style="height: 40px;" placeholder="Enter Degree" name="Degree" required>
   
               <label for="gradYear">Expected/Completed Graduation Year:</label>
-              <input type="text" id="gradYear" placeholder="Enter Graduation Year" name="gradYear" required>
+              <input type="text" id="gradYear"  style="height: 40px;" placeholder="Enter Graduation Year" name="GradeYear" required>
   
               <label for="applicationType">Applying for:</label>
-              <select id="applicationType" name="applicationType" required>
+              <select id="applicationType"  style="height: 50px;" name="ApplicationType" required>
                   <option value="Not Selected">Select an option</option>
                   <option value="job">Job</option>
                   <option value="internship">Internship</option>
+                  <option value="Corporate Training">Corporate Training</option>
               </select>
   
-              <button type="submit" name="Submit">Submit</button>
+              <input type="hidden" id="serviceName" name="ServiceName" value="Application">
+
+
+              <button type="submit" name="Submit"  >Submit</button>
           </form>
         </div>
+       
         <script>
-          const scriptURL = 'https://script.google.com/macros/s/AKfycbxcT-9kBU55moc1llhI_AhpE1CkQ-PwX66jcuJ4a1zHq6j9uVtlqV8g7B83HZuh7IKl/exec';
+          const scriptURL = 'https://script.google.com/macros/s/AKfycbzZq7wjxEcLAFLCANRHeDhKW3cT-SswonFZX-xFOfl-ekrYp8brspENpW05lzrFKdzX/exec';
           const form = document.forms['google-sheet'];
   
           form.addEventListener('submit', e => {
