@@ -2922,21 +2922,33 @@ height: 2px;
               <input type="hidden" id="serviceName" name="ServiceName" value="Application">
 
 
-              <button type="submit" name="Submit"  >Submit</button>
+              <button  type="submit" name="Submit"  >Submit</button>
           </form>
+          <div id="loadingMessage" style="display:none;color:whitesmoke ;">Submitting your application...</div>
         </div>
        
         <script>
           const scriptURL = 'https://script.google.com/macros/s/AKfycbzZq7wjxEcLAFLCANRHeDhKW3cT-SswonFZX-xFOfl-ekrYp8brspENpW05lzrFKdzX/exec';
           const form = document.forms['google-sheet'];
-  
-          form.addEventListener('submit', e => {
-              e.preventDefault();
-              fetch(scriptURL, { method: 'POST', body: new FormData(form) })
-                  .then(response => alert('Thanks for contacting us! We will contact you soon.'))
-                  .catch(error => console.error('Error!', error.message));
-          });
-      </script>
+    const submitBtn = document.getElementById('submitBtn');
+    const loadingMessage = document.getElementById('loadingMessage');
+    
+    form.addEventListener('submit', e => {
+      e.preventDefault();
+      // submitBtn.disabled = true;
+      loadingMessage.style.display = 'block'; // Show loading message
+      fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+        .then(response => {
+          alert('Thanks for contacting us! We will contact you soon.');
+          window.location.reload();
+        })
+        .catch(error => {
+          console.error('Error!', error.message);
+          // submitBtn.disabled = false; // Re-enable the button if there's an error
+          loadingMessage.style.display = 'none'; // Hide loading message if there's an error
+        });
+    });
+  </script>
     </div>
     </html>
     
