@@ -2912,14 +2912,14 @@ height: 2px;
               <input type="text" id="gradYear"  style="height: 40px;" placeholder="Enter Graduation Year" name="GradeYear" required>
   
               <label for="applicationType">Applying for:</label>
-              <select id="applicationType"  style="height: 50px;" name="ApplicationType" required>
+              <select id="applicationType"  style="height: 50px;" name="ServiceRequired" required>
                   <option value="Not Selected">Select an option</option>
                   <option value="job">Job</option>
                   <option value="internship">Internship</option>
                   <option value="Corporate Training">Corporate Training</option>
               </select>
   
-              <input type="hidden" id="serviceName" name="ServiceName" value="Application">
+             
 
 
               <button  type="submit" name="Submit"  >Submit</button>
@@ -2935,8 +2935,8 @@ height: 2px;
     
     form.addEventListener('submit', e => {
       e.preventDefault();
-      // submitBtn.disabled = true;
-      loadingMessage.style.display = 'block'; // Show loading message
+     
+      loadingMessage.style.display = 'block'; 
       fetch(scriptURL, { method: 'POST', body: new FormData(form) })
         .then(response => {
           alert('Thanks for contacting us! We will contact you soon.');
@@ -2944,8 +2944,8 @@ height: 2px;
         })
         .catch(error => {
           console.error('Error!', error.message);
-          // submitBtn.disabled = false; // Re-enable the button if there's an error
-          loadingMessage.style.display = 'none'; // Hide loading message if there's an error
+         
+          loadingMessage.style.display = 'none'; 
         });
     });
   </script>

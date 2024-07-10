@@ -2906,32 +2906,45 @@ header.page-header {
                                         <h2 class="heading">Leave your Number</h2>
                                         <form id="jobApplicationForm" autocomplete="off" method="post" name="google-sheet">
                                           <label for="firstName">Full Name:</label>
-                                          <input type="text" id="firstName"  style="height: 40px;" placeholder="Enter Full Name" name="FullName" required>
+                                          <input type="text" id="firstName"  style="height: 40px;" placeholder="Enter Full Name" name="FullName" required  maxlength="60" pattern="[A-Za-z\s]{1,60}">
                               
                                         
                                           <label for="email1">Email:</label>
                                           <input type="email" id="email1"  style="height: 40px;" placeholder="Enter Email" name="Email" required>
                               
                                           <label for="phone">  Phone Number:</label>
-                                          <input type="number" id="phone" placeholder="Enter Phone Number" name="PhoneNumber" required >
+                                          <input type="number" id="phone" placeholder="Enter Phone Number" name="PhoneNumber" required  oninput="javascript: if (this.value.length > 10) this.value = this.value.slice(0, 10);" >
                                           
-                                          <input type="hidden" id="serviceName" name="ServiceName" value="IT Infrastructure Management">
+                                          <input type="hidden" id="serviceName" name="ServiceRequired" value="IT Infrastructure Management">
                                                     
                                           <button type="submit" name="Submit"  >Submit</button>
                                       </form>
+                                      <div id="loadingMessage" style="display:none;color:whitesmoke ;">Submitting your application...</div>
+
                                     </div>
                                    
                                     <script>
                                       const scriptURL = 'https://script.google.com/macros/s/AKfycbzZq7wjxEcLAFLCANRHeDhKW3cT-SswonFZX-xFOfl-ekrYp8brspENpW05lzrFKdzX/exec';
                                       const form = document.forms['google-sheet'];
-                              
-                                      form.addEventListener('submit', e => {
-                                          e.preventDefault();
-                                          fetch(scriptURL, { method: 'POST', body: new FormData(form) })
-                                              .then(response => alert('Thanks for contacting us! We will contact you soon.'))
-                                              .catch(error => console.error('Error!', error.message));
-                                      });
-                                  </script>
+                                      const submitBtn = document.getElementById('submitBtn');
+    const loadingMessage = document.getElementById('loadingMessage');
+    
+    form.addEventListener('submit', e => {
+      e.preventDefault();
+     
+      loadingMessage.style.display = 'block'; 
+      fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+        .then(response => {
+          alert('Thanks for contacting us! We will contact you soon.');
+          window.location.reload();
+        })
+        .catch(error => {
+          console.error('Error!', error.message);
+         
+          loadingMessage.style.display = 'none'; 
+        });
+    });
+  </script>
                                   </div>
                   <div class="bosluk3"></div>
               </div>

@@ -2973,23 +2973,36 @@ height: 2px;
       <label for="message">Message:</label>
       <textarea type="text" class="messagearea" id="message" name="Message" placeholder="Enter Your Message" ></textarea>   
       
-      <input type="hidden" id="serviceName" name="ServiceName" value="Contact">
+      <input type="hidden" id="serviceName" name="ServiceRequired" value="Contact">
 
       <button type="submit" name="Submit"  >Submit</button>
   </form>
+  <div id="loadingMessage" style="display:none;color:whitesmoke ;">Submitting your application...</div>
+
 </div>
 
 <script>
   const scriptURL = 'https://script.google.com/macros/s/AKfycbzZq7wjxEcLAFLCANRHeDhKW3cT-SswonFZX-xFOfl-ekrYp8brspENpW05lzrFKdzX/exec';
   const form = document.forms['google-sheet'];
-
-  form.addEventListener('submit', e => {
+  const submitBtn = document.getElementById('submitBtn');
+    const loadingMessage = document.getElementById('loadingMessage');
+    
+    form.addEventListener('submit', e => {
       e.preventDefault();
+     
+      loadingMessage.style.display = 'block'; 
       fetch(scriptURL, { method: 'POST', body: new FormData(form) })
-          .then(response => alert('Thanks for contacting us! We will contact you soon.'))
-          .catch(error => console.error('Error!', error.message));
-  });
-</script>
+        .then(response => {
+          alert('Thanks for contacting us! We will contact you soon.');
+          window.location.reload();
+        })
+        .catch(error => {
+          console.error('Error!', error.message);
+         
+          loadingMessage.style.display = 'none'; 
+        });
+    });
+  </script>
   </div>
 
 
